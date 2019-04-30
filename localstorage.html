@@ -2,18 +2,16 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <script='./script.js'></script>
     <title>Local Storage</title>
   </head>
   <body>
     <h1>Below Should Come From Local Storage</h1>
     <a id="second-link">Link to test cafe page</a>
-    
   </body>
 </html>
-a
 <script>
-  
-const bucket = JSON.parse(localStorage.getItem('storageBucket'))
-const a = document.getElementById('second-link');
-a.href = bucket[0].link;
+  const bucket = JSON.parse(localStorage.getItem('storageBucket'))
+  const a = document.getElementById('second-link');
+  a.href = bucket[0].link;
 </script>
