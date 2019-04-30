@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="./script.js"></script>
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <button id="first">first</button>
+    <button id="second">second</button>
+    <script>
+      const storageBucket = [];
+      const first = document.getElementById("first");
+      const second = document.getElementById("second");
+      first.addEventListener("click", () => {
+        storageBucket.push({
+          extra: "adfasdfasdf",
+          testObj: { abcdef: "12345", ghijkl: "123123" },
+          link: "https://devexpress.github.io/testcafe/example/"
+        });
+        window.localStorage.setItem(
+          "storageBucket",
+          JSON.stringify(storageBucket)
+        );
+      });
+      second.addEventListener("click", () => {
+        window.open("./localstorage.html", "_blank");
+      });
+    </script>
+  </body>
+</html>
