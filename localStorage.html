@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <h1>Below Should Come From Local Storage</h1>
+    <a id="second-link">Link to test cafe page</a>
+    
+  </body>
+</html>
+a
+<script>
+  
+const arr= JSON.parse(localStorage.getItem('link'))
+const a = document.getElementById('second-link');
+a.href = arr[0].link;
+</script>
