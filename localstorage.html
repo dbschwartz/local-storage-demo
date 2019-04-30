@@ -13,7 +13,7 @@
 a
 <script>
   
-const arr= JSON.parse(localStorage.getItem('link'))
+const bucket = JSON.parse(localStorage.getItem('storageBucket'))
 const a = document.getElementById('second-link');
-a.href = arr[0].link;
+a.href = bucket[0].link;
 </script>
