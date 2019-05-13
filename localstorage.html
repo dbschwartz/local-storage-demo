@@ -9,9 +9,9 @@
     <h1>If There Is A Link Below Then It Is Coming From Local Storage</h1>
     <a id="third">3. Link to test cafe page</a>
   </body>
-</html>
 <script>
   const bucket = JSON.parse(localStorage.getItem('storageBucket'))
   const a = document.getElementById('third');
   a.href = bucket[0].link;
 </script>
+</html>
